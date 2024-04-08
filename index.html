@@ -134,15 +134,24 @@
       <div id="messageDisplayArea"></div>
       
 	<canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+
 	<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
+        	var canvas = document.getElementById('myCanvas');
+        	var context = canvas.getContext("2d");
+        	context.font = '20pt Calibri';
+        	context.fillStyle = "black";
+        	context.fillText("Original image will go here", 10, 20);
       </script>
 
 	<canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas> <!--Create the second canvas with the same size and style as the first one-->
+
+	<script> //This script innitiates, formats, and puts the text on the canvas "myCanvas2"
+		var canvas2 = document.getElementById("myCanvas2"); //to find the <canvas> element in the DOM
+		var context2 = canvas2.getContext("2d"); //Pass the string 2d to the second canvas
+		context2.font = "20pt Calibri"; //Set font and size for text
+		context2.fillStyle = "black";
+		context2.fillText("Image with blue intensities only will be here", 10, 20); //Add text on the canvas with its position
+	</script>
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
