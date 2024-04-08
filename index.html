@@ -98,8 +98,9 @@
 
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-          /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
+	//Let the following script to retrieve image data from user's upload on 1st canvas
+	const imgData = context.getImageData(0, 0, 600, 500); //Get RGB data from image upload from 1st canvas
+	
           
           
           
@@ -119,6 +120,7 @@
   }); // end of the fileInput.addEventListener function
  } // end of the window.onload function
  </script>
+
  </head>
 
  <body>
