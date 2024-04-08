@@ -133,14 +133,16 @@
       </div>
       <div id="messageDisplayArea"></div>
       
-      <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+	<canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+	<script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
       </script>
+
+	<canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas> <!--Create the second canvas with the same size and style as the first one-->
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
