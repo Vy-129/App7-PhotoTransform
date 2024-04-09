@@ -101,6 +101,7 @@
 	//Let the following script to retrieve image data from user's upload on 1st canvas
 	const imgData = context.getImageData(0, 0, 600, 500); //Get RGB data from image upload from 1st canvas
 	
+	//I was I able to change the image's pixel intensities with code from https://javascript.plainenglish.io/how-to-change-image-hue-with-html5-canvas-in-javascript-514f0e8226a0
 	//The following script is to apply required values for RGB components of image
 	for (let i = 0; i < imgData.data.length; i += 4) { 
 		let red = imgData.data[i]; //variable for red
@@ -110,7 +111,10 @@
 		imgData.data[i] = 0 - red; //remove all red
 		imgData.data[i + 1] = 0 - green;  //remove all green  
 		imgData.data[i + 2] = 255 - blue; //keep all blue
-	}     
+	}   
+	
+	//Put image with only blue pixels back to 2nd canvas
+	context2.putImageData(imgData, 0, 0);  
           
         } // end of img.onload
         
